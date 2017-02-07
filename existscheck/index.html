@@ -5,6 +5,29 @@
     <title>Sign Up</title>
 </head>
 <body>
+    <form action="signup.php" method="post" autocomplete="off">
+        
+        <div class="form-field">
+            <label for="username">Choose a username</label>
+            <input type="text" name="username" id="username" class="check-exists" data-type="username">
+            <span class="check-exists-feedback" data-type="username"></span>
+        </div>
+        
+        <div class="form-field">
+            <label for="email">Enter email</label>
+            <input type="text" name="email" id="email" class="check-exists" data-type="email">
+            <span class="check-exists-feedback" data-type="email"></span>
+        </div>
+        
+        <input type="submit" value="Sign Up">
+        
+    </form>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/existscheck.jquery.js"></script>
+    <script>
+        $('.check-exists').existsChecker();
+    </script>
     
 </body>
 </html>
